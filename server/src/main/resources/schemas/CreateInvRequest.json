@@ -1,0 +1,25 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "createinv",
+    "description": "user login",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be login",
+            "type":"string",
+            "pattern":"^createinv$"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "opponent": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        }
+    },
+    "required": ["requestType", "userID", "opponent"],
+    "additionalProperties": false
+  }
+  

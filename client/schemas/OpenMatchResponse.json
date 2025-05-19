@@ -1,0 +1,32 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "openmatch",
+    "description": "match history",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^openmatch$"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "matchID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "match": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "response": {
+            "type": "boolean",
+            "description": "A non-empty string sent from the frontend"
+        }
+    },
+    "required": ["requestType", "userID", "matchID", "match", "response"],
+    "additionalProperties": false
+  }

@@ -1,0 +1,32 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "login",
+    "description": "user response",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^login$"
+        },
+        "username": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "password": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the backend"
+        },
+        "response": {
+            "type": "string",
+            "description": "A non-empty string sent from the backend"
+        }
+    },
+    "required": ["requestType", "username", "password", "userID", "response"],
+    "additionalProperties": false
+  }

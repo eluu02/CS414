@@ -1,0 +1,32 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "declineinv",
+    "description": "user response",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^declineinv$"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "inviteID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "success": {
+            "type": "boolean",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "response": {
+            "type": "string",
+            "description": "A non-empty string sent from the backend"
+        }
+    },
+    "required": ["requestType", "userID", "inviteID", "success", "response"],
+    "additionalProperties": false
+  }

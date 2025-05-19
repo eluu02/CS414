@@ -1,0 +1,28 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "matchhist",
+    "description": "match history",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^matchhist$"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "matches": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "response": {
+            "type": "boolean",
+            "description": "A non-empty string sent from the frontend"
+        }
+    },
+    "required": ["requestType", "userID", "matches", "response"],
+    "additionalProperties": false
+  }

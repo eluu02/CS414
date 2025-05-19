@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "1ce92965-49d1-4358-bea0-a4535400adab",
+		"name": "config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32979238"
+	},
+	"item": [
+		{
+			"name": "base",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response is HTTP200 status\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Server-side team name is correct\", () => {",
+							"    const response = pm.response.json();",
+							"pm.collectionVariables.set(\"TEAM_NAME\", \"t14 Binary Bandits\");",
+							"    const expectedTeamName = pm.collectionVariables.get(\"TEAM_NAME\");",
+							"    pm.expect(response.serverName).to.eql(expectedTeamName);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"requestType\": \"config\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/config",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lavelle3: invalid pawn move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Move is invalid for pawn\", function () {\r",
+							"    pm.response.to.have.status(200); // Ensure the status code is 200\r",
+							"    var responseJson = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseJson.isValid).to.be.false;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestType\": \"movepiece\",\r\n    \"userID\": 123,\r\n    \"matchID\": 456,\r\n    \"move\": \"4247\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/movepiece",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"movepiece"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lavelle3: invalid king move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Move is invalid for King\", function () {\r",
+							"    pm.response.to.have.status(200); // Ensure the status code is 200\r",
+							"    var responseJson = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseJson.isValid).to.be.false;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestType\": \"movepiece\",\r\n    \"userID\": 123,\r\n    \"matchID\": 456,\r\n    \"move\": \"7273\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/movepiece",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"movepiece"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lavelle3: invalid bishop move",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Move is invalid for King\", function () {\r",
+							"    pm.response.to.have.status(200); // Ensure the status code is 200\r",
+							"    var responseJson = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(responseJson.isValid).to.be.false;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestType\": \"movepiece\",\r\n    \"userID\": 123,\r\n    \"matchID\": 456,\r\n    \"move\": \"4649\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/movepiece",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"movepiece"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "TEAM_NAME",
+			"value": ""
+		}
+	]
+}

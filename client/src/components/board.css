@@ -1,0 +1,227 @@
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    padding: 20px;
+    height: calc(100vh - 80px); /* Subtract the header height (adjust 80px to your header's actual height) */
+    box-sizing: border-box; /* Include padding in height calculation */
+    margin-top: 80px; /* Match the header height to prevent overlap */
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width is used */
+}
+/*
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px; // Adjust as needed 
+    flex-shrink: 0; // Prevent shrinking 
+    justify-content: center; // Center contents vertically 
+    height: 100%; // Take up the full height of the parent 
+}
+*/
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px; /* Adjust as needed */
+    flex-shrink: 0; /* Prevent shrinking */
+    justify-content: center; /* Center contents vertically */
+    align-items: center; /* Center contents horizontally */
+    height: 100%; /* Take up the full height of the parent */
+    margin: auto; /* Optional for further centering refinement */
+}
+
+.right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.chessboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.chessboard {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    max-width: 90vh;
+    max-height: 90vh;
+    aspect-ratio: 1 / 1;
+    background-color: black;
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.light {
+    background-color: #f0d9b5;
+}
+
+.dark {
+    background-color: #b58863;
+}
+
+.invite-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.invite-button:hover {
+    background-color: #0056b3;
+}
+
+.piece {
+  font-size: 1.5rem; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.selected-from {
+  border: 3px solid blue; /* Highlight the 'from' cell */
+}
+
+.selected-to {
+  border: 3px solid green; /* Highlight the 'to' cell */
+}
+
+.move-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.move-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/*
+.chessboard-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; 
+	width: 100vw;
+  }
+  /*
+  * {
+	box-sizing: border-box;
+  }*/
+/*
+  .chessboard {
+	display: flex;
+	flex-direction: column;
+	width: 40vw;
+	max-width: 90vh;
+	max-height: 90vh;
+	aspect-ratio: 1/ 1;
+	background-color: black;
+  }
+  
+  .row {
+	display: flex;
+  }
+  
+  .square {
+	flex: 1;
+	aspect-ratio: 1 / 1;
+  }
+  
+  .light {
+	background-color: #f0d9b5;
+  }
+  
+  .dark {
+	background-color: #b58863;
+  }
+  .invite-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.invite-button:hover {
+    background-color: #0056b3;
+}
+*/
+
+
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.move-button,
+.refresh-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.move-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.refresh-button {
+  background-color: #28a745;
+}
+
+.refresh-button:hover {
+  background-color: #218838;
+}

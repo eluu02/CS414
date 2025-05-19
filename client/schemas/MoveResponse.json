@@ -1,0 +1,36 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "movepiece",
+    "description": "match history",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^movepiece$"
+        },
+        "userID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "matchID": {
+            "type": "integer",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "move": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "isValid": {
+            "type": "boolean",
+            "description": "A non-empty string sent from the frontend"
+        },
+        "response": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        }
+    },
+    "required": ["requestType", "userID", "matchID", "move", "isValid", "response"],
+    "additionalProperties": false
+  }

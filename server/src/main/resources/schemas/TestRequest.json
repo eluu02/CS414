@@ -1,0 +1,21 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "test",
+    "description": "test for POST request",
+    "type": "object",
+    "properties": {
+        "requestType": {
+            "description":"the object type should be test",
+            "type":"string",
+            "pattern":"^test$"
+        },
+        "str": {
+            "type": "string",
+            "description": "A non-empty string sent from the frontend"
+        }
+    },
+    "required": ["requestType", "str"],
+    "additionalProperties": false
+  }
+  
